@@ -1,0 +1,232 @@
+{
+  "ticket_count": 164,
+  "guardrails": {
+    "max_input_tokens": 400,
+    "empty_tickets": 4,
+    "long_tickets": 4,
+    "long_ticket_estimated_tokens": [
+      734
+    ]
+  },
+  "redaction": {
+    "substitutions": {
+      "emails": 55,
+      "phones": 91,
+      "order_ids": 132
+    },
+    "total_substitutions": 278,
+    "matches_after_redaction": {
+      "emails": 0,
+      "phones": 0,
+      "order_ids": 0
+    },
+    "total_matches_after_redaction": 0
+  },
+  "zero_shot": {
+    "classified": 147,
+    "correct": 126,
+    "accuracy": 0.8571428571428571,
+    "total_tokens": 12832,
+    "tokens_per_classified_ticket": 87.29251700680273,
+    "status_counts": {
+      "classified_json": 135,
+      "skipped_empty": 4,
+      "flagged_long": 4,
+      "classified_keyword": 12,
+      "flagged_invalid_output": 9
+    },
+    "confusion_matrix_labels": [
+      "billing",
+      "delivery",
+      "technical",
+      "fraud"
+    ],
+    "confusion_matrix": [
+      [
+        38,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        36,
+        0,
+        0
+      ],
+      [
+        10,
+        0,
+        29,
+        0
+      ],
+      [
+        11,
+        0,
+        0,
+        23
+      ]
+    ]
+  },
+  "few_shot": {
+    "classified": 147,
+    "correct": 147,
+    "accuracy": 1.0,
+    "total_tokens": 23596,
+    "tokens_per_classified_ticket": 160.51700680272108,
+    "status_counts": {
+      "classified_json": 135,
+      "skipped_empty": 4,
+      "flagged_long": 4,
+      "classified_keyword": 12,
+      "flagged_invalid_output": 9
+    },
+    "confusion_matrix_labels": [
+      "billing",
+      "delivery",
+      "technical",
+      "fraud"
+    ],
+    "confusion_matrix": [
+      [
+        38,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        36,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        39,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        34
+      ]
+    ]
+  },
+  "zero_shot_budget_demo": {
+    "classified": 69,
+    "correct": 58,
+    "accuracy": 0.8405797101449275,
+    "total_tokens": 6018,
+    "tokens_per_classified_ticket": 87.21739130434783,
+    "status_counts": {
+      "classified_json": 64,
+      "skipped_empty": 4,
+      "flagged_long": 4,
+      "classified_keyword": 5,
+      "flagged_invalid_output": 4,
+      "budget_exhausted": 83
+    },
+    "confusion_matrix_labels": [
+      "billing",
+      "delivery",
+      "technical",
+      "fraud"
+    ],
+    "confusion_matrix": [
+      [
+        18,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        12,
+        0,
+        0
+      ],
+      [
+        4,
+        0,
+        16,
+        0
+      ],
+      [
+        7,
+        0,
+        0,
+        12
+      ]
+    ],
+    "token_budget": 6000,
+    "budget_exhausted": 83
+  },
+  "few_shot_final": {
+    "classified": 147,
+    "correct": 147,
+    "accuracy": 1.0,
+    "total_tokens": 23596,
+    "tokens_per_classified_ticket": 160.51700680272108,
+    "status_counts": {
+      "classified_json": 135,
+      "skipped_empty": 4,
+      "flagged_long": 4,
+      "classified_keyword": 12,
+      "flagged_invalid_output": 9
+    },
+    "confusion_matrix_labels": [
+      "billing",
+      "delivery",
+      "technical",
+      "fraud"
+    ],
+    "confusion_matrix": [
+      [
+        38,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        36,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        39,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        34
+      ]
+    ],
+    "token_budget": 100000,
+    "output_rows": 164
+  },
+  "retry_log_lines": 66,
+  "retry_counts_by_run": {
+    "zero_shot": 19,
+    "few_shot": 19,
+    "zero_shot_budget_6000": 9,
+    "few_shot_final_100000": 19
+  },
+  "retry_max_wait_seconds": 0.056152,
+  "routes": {
+    "support_queue": 102,
+    "security_team": 34,
+    "human_review": 17,
+    "premium_desk": 11
+  },
+  "priorities": {
+    "NORMAL": 119,
+    "HIGH": 45
+  }
+}

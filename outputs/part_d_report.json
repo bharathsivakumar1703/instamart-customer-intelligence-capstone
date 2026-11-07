@@ -1,0 +1,497 @@
+{
+  "chunk_counts_overlap_10": {
+    "refund_policy.txt": 4,
+    "delivery_policy.txt": 3,
+    "escalation_policy.txt": 3,
+    "payment_policy.txt": 3,
+    "privacy_policy.txt": 2
+  },
+  "chunk_total_overlap_10": 15,
+  "chunk_counts_overlap_0": {
+    "refund_policy.txt": 3,
+    "delivery_policy.txt": 3,
+    "escalation_policy.txt": 2,
+    "payment_policy.txt": 3,
+    "privacy_policy.txt": 2
+  },
+  "chunk_total_overlap_0": 13,
+  "refund_query_top3_sources": [
+    "refund_policy.txt",
+    "refund_policy.txt",
+    "refund_policy.txt"
+  ],
+  "retrieval_evaluation_overlap_10": {
+    "answerable_count": 12,
+    "expected_doc_in_top3": 12,
+    "expected_fact_in_answer": 12,
+    "unanswerable_count": 2,
+    "correct_fallbacks": 2,
+    "failures": [],
+    "per_question": [
+      {
+        "question": "What delivery time makes a completed order eligible for a full refund?",
+        "expected_doc": "refund_policy.txt",
+        "expected_fact": "more than 45 minutes",
+        "sources": [
+          "refund_policy.txt",
+          "refund_policy.txt",
+          "privacy_policy.txt"
+        ],
+        "answer": "order is delivered in more than 45 minutes, the customer receives a full refund of the order amount.",
+        "expected_doc_in_top3": true,
+        "expected_fact_in_answer": true
+      },
+      {
+        "question": "Who must approve a refund above INR 1000?",
+        "expected_doc": "refund_policy.txt",
+        "expected_fact": "human support lead",
+        "sources": [
+          "refund_policy.txt",
+          "refund_policy.txt",
+          "refund_policy.txt"
+        ],
+        "answer": "A refund above INR 1000 must be approved by a human support lead before money is returned.",
+        "expected_doc_in_top3": true,
+        "expected_fact_in_answer": true
+      },
+      {
+        "question": "How many days do I have to raise a refund request?",
+        "expected_doc": "refund_policy.txt",
+        "expected_fact": "within 7 days",
+        "sources": [
+          "refund_policy.txt",
+          "privacy_policy.txt",
+          "refund_policy.txt"
+        ],
+        "answer": "A refund request must be raised within 7 days of the delivery date.",
+        "expected_doc_in_top3": true,
+        "expected_fact_in_answer": true
+      },
+      {
+        "question": "What is the delivery fee on small orders?",
+        "expected_doc": "delivery_policy.txt",
+        "expected_fact": "INR 25",
+        "sources": [
+          "delivery_policy.txt",
+          "delivery_policy.txt",
+          "payment_policy.txt"
+        ],
+        "answer": "A delivery fee of INR 25 is charged on orders below INR 199,\n \nof INR 25 is charged on orders below INR 199, and delivery is free on orders of INR 199 or more.",
+        "expected_doc_in_top3": true,
+        "expected_fact_in_answer": true
+      },
+      {
+        "question": "On orders of what value is delivery free?",
+        "expected_doc": "delivery_policy.txt",
+        "expected_fact": "INR 199 or more",
+        "sources": [
+          "delivery_policy.txt",
+          "delivery_policy.txt",
+          "payment_policy.txt"
+        ],
+        "answer": "of INR 25 is charged on orders below INR 199, and delivery is free on orders of INR 199 or more.",
+        "expected_doc_in_top3": true,
+        "expected_fact_in_answer": true
+      },
+      {
+        "question": "Why does the electronics delivery need a one time password?",
+        "expected_doc": "delivery_policy.txt",
+        "expected_fact": "one time password",
+        "sources": [
+          "delivery_policy.txt",
+          "delivery_policy.txt",
+          "payment_policy.txt"
+        ],
+        "answer": "Electronics items are delivered only after the customer shares a one time password with the rider.",
+        "expected_doc_in_top3": true,
+        "expected_fact_in_answer": true
+      },
+      {
+        "question": "Is cash on delivery available for a large order?",
+        "expected_doc": "payment_policy.txt",
+        "expected_fact": "INR 2500",
+        "sources": [
+          "payment_policy.txt",
+          "payment_policy.txt",
+          "payment_policy.txt"
+        ],
+        "answer": "Cash on delivery is available only for orders up to INR 2500.",
+        "expected_doc_in_top3": true,
+        "expected_fact_in_answer": true
+      },
+      {
+        "question": "How soon is money returned when a payment fails but is deducted?",
+        "expected_doc": "payment_policy.txt",
+        "expected_fact": "48 hours",
+        "sources": [
+          "payment_policy.txt",
+          "payment_policy.txt",
+          "refund_policy.txt"
+        ],
+        "answer": "If a payment fails but money is deducted, the amount is returned automatically\n \nfails but money is deducted, the amount is returned automatically within 48 hours.",
+        "expected_doc_in_top3": true,
+        "expected_fact_in_answer": true
+      },
+      {
+        "question": "Can wallet balance be refunded as cash?",
+        "expected_doc": "payment_policy.txt",
+        "expected_fact": "never refunded as cash",
+        "sources": [
+          "payment_policy.txt",
+          "payment_policy.txt",
+          "payment_policy.txt"
+        ],
+        "answer": "Wallet balance can be used for any order and is never refunded as cash.",
+        "expected_doc_in_top3": true,
+        "expected_fact_in_answer": true
+      },
+      {
+        "question": "When are delivery addresses deleted from active systems?",
+        "expected_doc": "privacy_policy.txt",
+        "expected_fact": "180 days",
+        "sources": [
+          "privacy_policy.txt",
+          "privacy_policy.txt",
+          "delivery_policy.txt"
+        ],
+        "answer": "Delivery addresses are deleted from active systems 180 days after\n \nDelivery addresses are deleted from active systems 180 days after the last order.",
+        "expected_doc_in_top3": true,
+        "expected_fact_in_answer": true
+      },
+      {
+        "question": "How fast must a fraud ticket reach the security team?",
+        "expected_doc": "escalation_policy.txt",
+        "expected_fact": "within 2 hours",
+        "sources": [
+          "escalation_policy.txt",
+          "escalation_policy.txt",
+          "escalation_policy.txt"
+        ],
+        "answer": "A ticket about fraud or an unauthorized transaction is marked high priority and sent to the security team within 2 hours.",
+        "expected_doc_in_top3": true,
+        "expected_fact_in_answer": true
+      },
+      {
+        "question": "After how many steps must an automated assistant hand over to a human?",
+        "expected_doc": "escalation_policy.txt",
+        "expected_fact": "6 steps",
+        "sources": [
+          "escalation_policy.txt",
+          "escalation_policy.txt",
+          "delivery_policy.txt"
+        ],
+        "answer": "If an automated assistant cannot resolve a ticket within 6 steps, it must hand the case to a human agent with a short summary.",
+        "expected_doc_in_top3": true,
+        "expected_fact_in_answer": true
+      },
+      {
+        "question": "What is the favourite colour of the company mascot?",
+        "answer": "I could not find that information in the policy documents.",
+        "fallback": true
+      },
+      {
+        "question": "Who won the cricket world cup final?",
+        "answer": "I could not find that information in the policy documents.",
+        "fallback": true
+      }
+    ]
+  },
+  "retrieval_evaluation_overlap_0": {
+    "answerable_count": 12,
+    "expected_doc_in_top3": 12,
+    "expected_fact_in_answer": 10,
+    "unanswerable_count": 2,
+    "correct_fallbacks": 2,
+    "failures": [
+      {
+        "question": "What delivery time makes a completed order eligible for a full refund?",
+        "expected_doc": "refund_policy.txt",
+        "expected_fact": "more than 45 minutes",
+        "sources": [
+          "refund_policy.txt",
+          "refund_policy.txt",
+          "privacy_policy.txt"
+        ],
+        "answer": "receives a full refund of the order amount.",
+        "expected_doc_in_top3": true,
+        "expected_fact_in_answer": false
+      },
+      {
+        "question": "How soon is money returned when a payment fails but is deducted?",
+        "expected_doc": "payment_policy.txt",
+        "expected_fact": "48 hours",
+        "sources": [
+          "payment_policy.txt",
+          "refund_policy.txt",
+          "privacy_policy.txt"
+        ],
+        "answer": "If a payment fails but money is deducted, the amount is returned automatically\n \n1000 must be approved by a human support lead before money is returned.",
+        "expected_doc_in_top3": true,
+        "expected_fact_in_answer": false
+      }
+    ],
+    "per_question": [
+      {
+        "question": "What delivery time makes a completed order eligible for a full refund?",
+        "expected_doc": "refund_policy.txt",
+        "expected_fact": "more than 45 minutes",
+        "sources": [
+          "refund_policy.txt",
+          "refund_policy.txt",
+          "privacy_policy.txt"
+        ],
+        "answer": "receives a full refund of the order amount.",
+        "expected_doc_in_top3": true,
+        "expected_fact_in_answer": false
+      },
+      {
+        "question": "Who must approve a refund above INR 1000?",
+        "expected_doc": "refund_policy.txt",
+        "expected_fact": "human support lead",
+        "sources": [
+          "refund_policy.txt",
+          "refund_policy.txt",
+          "refund_policy.txt"
+        ],
+        "answer": "A refund above INR\n \n1000 must be approved by a human support lead before money is returned.",
+        "expected_doc_in_top3": true,
+        "expected_fact_in_answer": true
+      },
+      {
+        "question": "How many days do I have to raise a refund request?",
+        "expected_doc": "refund_policy.txt",
+        "expected_fact": "within 7 days",
+        "sources": [
+          "refund_policy.txt",
+          "refund_policy.txt",
+          "refund_policy.txt"
+        ],
+        "answer": "A refund request must be raised within 7 days of the delivery date.",
+        "expected_doc_in_top3": true,
+        "expected_fact_in_answer": true
+      },
+      {
+        "question": "What is the delivery fee on small orders?",
+        "expected_doc": "delivery_policy.txt",
+        "expected_fact": "INR 25",
+        "sources": [
+          "delivery_policy.txt",
+          "payment_policy.txt",
+          "delivery_policy.txt"
+        ],
+        "answer": "A delivery fee of INR 25 is charged on orders below INR 199,\n \nPayment Policy.",
+        "expected_doc_in_top3": true,
+        "expected_fact_in_answer": true
+      },
+      {
+        "question": "On orders of what value is delivery free?",
+        "expected_doc": "delivery_policy.txt",
+        "expected_fact": "INR 199 or more",
+        "sources": [
+          "delivery_policy.txt",
+          "delivery_policy.txt",
+          "payment_policy.txt"
+        ],
+        "answer": "A delivery fee of INR 25 is charged on orders below INR 199,\n \nand delivery is free on orders of INR 199 or more.",
+        "expected_doc_in_top3": true,
+        "expected_fact_in_answer": true
+      },
+      {
+        "question": "Why does the electronics delivery need a one time password?",
+        "expected_doc": "delivery_policy.txt",
+        "expected_fact": "one time password",
+        "sources": [
+          "delivery_policy.txt",
+          "delivery_policy.txt",
+          "delivery_policy.txt"
+        ],
+        "answer": "Electronics items are delivered only after the customer shares a one time password with the rider.",
+        "expected_doc_in_top3": true,
+        "expected_fact_in_answer": true
+      },
+      {
+        "question": "Is cash on delivery available for a large order?",
+        "expected_doc": "payment_policy.txt",
+        "expected_fact": "INR 2500",
+        "sources": [
+          "payment_policy.txt",
+          "payment_policy.txt",
+          "payment_policy.txt"
+        ],
+        "answer": "Cash on delivery is available only for orders up to INR 2500.",
+        "expected_doc_in_top3": true,
+        "expected_fact_in_answer": true
+      },
+      {
+        "question": "How soon is money returned when a payment fails but is deducted?",
+        "expected_doc": "payment_policy.txt",
+        "expected_fact": "48 hours",
+        "sources": [
+          "payment_policy.txt",
+          "refund_policy.txt",
+          "privacy_policy.txt"
+        ],
+        "answer": "If a payment fails but money is deducted, the amount is returned automatically\n \n1000 must be approved by a human support lead before money is returned.",
+        "expected_doc_in_top3": true,
+        "expected_fact_in_answer": false
+      },
+      {
+        "question": "Can wallet balance be refunded as cash?",
+        "expected_doc": "payment_policy.txt",
+        "expected_fact": "never refunded as cash",
+        "sources": [
+          "payment_policy.txt",
+          "payment_policy.txt",
+          "payment_policy.txt"
+        ],
+        "answer": "Wallet balance can be used for any order and is never refunded as cash.",
+        "expected_doc_in_top3": true,
+        "expected_fact_in_answer": true
+      },
+      {
+        "question": "When are delivery addresses deleted from active systems?",
+        "expected_doc": "privacy_policy.txt",
+        "expected_fact": "180 days",
+        "sources": [
+          "privacy_policy.txt",
+          "delivery_policy.txt",
+          "escalation_policy.txt"
+        ],
+        "answer": "Delivery addresses are deleted from active systems 180 days after\n \nDelivery Policy.",
+        "expected_doc_in_top3": true,
+        "expected_fact_in_answer": true
+      },
+      {
+        "question": "How fast must a fraud ticket reach the security team?",
+        "expected_doc": "escalation_policy.txt",
+        "expected_fact": "within 2 hours",
+        "sources": [
+          "escalation_policy.txt",
+          "escalation_policy.txt",
+          "refund_policy.txt"
+        ],
+        "answer": "A ticket about fraud or an unauthorized transaction is marked high priority and sent to the security team within 2 hours.",
+        "expected_doc_in_top3": true,
+        "expected_fact_in_answer": true
+      },
+      {
+        "question": "After how many steps must an automated assistant hand over to a human?",
+        "expected_doc": "escalation_policy.txt",
+        "expected_fact": "6 steps",
+        "sources": [
+          "escalation_policy.txt",
+          "refund_policy.txt",
+          "delivery_policy.txt"
+        ],
+        "answer": "an automated assistant cannot resolve a ticket within 6 steps, it must hand the case to a human agent with a short summary.",
+        "expected_doc_in_top3": true,
+        "expected_fact_in_answer": true
+      },
+      {
+        "question": "What is the favourite colour of the company mascot?",
+        "answer": "I could not find that information in the policy documents.",
+        "fallback": true
+      },
+      {
+        "question": "Who won the cricket world cup final?",
+        "answer": "I could not find that information in the policy documents.",
+        "fallback": true
+      }
+    ]
+  },
+  "agent_scenarios": [
+    {
+      "scenario_id": "S1",
+      "status": "REFUND",
+      "refund_inr": 128.25,
+      "llm_calls": 5,
+      "tokens_used": 1147,
+      "expected_outcome": "REFUND"
+    },
+    {
+      "scenario_id": "S2",
+      "status": "REFUND",
+      "refund_inr": 135.0,
+      "llm_calls": 5,
+      "tokens_used": 1147,
+      "expected_outcome": "REFUND"
+    },
+    {
+      "scenario_id": "S3",
+      "status": "ESCALATE",
+      "refund_inr": 1999.0,
+      "llm_calls": 5,
+      "tokens_used": 1134,
+      "expected_outcome": "ESCALATE"
+    },
+    {
+      "scenario_id": "S4",
+      "status": "DENIED",
+      "refund_inr": 0.0,
+      "llm_calls": 4,
+      "tokens_used": 805,
+      "expected_outcome": "DENIED"
+    },
+    {
+      "scenario_id": "S5",
+      "status": "DENIED",
+      "refund_inr": 0.0,
+      "llm_calls": 3,
+      "tokens_used": 487,
+      "expected_outcome": "DENIED"
+    },
+    {
+      "scenario_id": "S6",
+      "status": "NOT_FOUND",
+      "refund_inr": 0.0,
+      "llm_calls": 2,
+      "tokens_used": 172,
+      "expected_outcome": "NOT_FOUND"
+    },
+    {
+      "scenario_id": "S7",
+      "status": "FALLBACK_MAX_ITERATIONS",
+      "refund_inr": 0.0,
+      "llm_calls": 6,
+      "tokens_used": 3300,
+      "expected_outcome": "FALLBACK"
+    }
+  ],
+  "s1_token_limit_demo": {
+    "status": "FALLBACK_TOKEN_LIMIT",
+    "llm_calls": 2,
+    "tokens_used": 202
+  },
+  "s1_timeout_demo": {
+    "status": "FALLBACK_TIMEOUT",
+    "llm_calls": 0,
+    "tokens_used": 0
+  },
+  "crash_resume": {
+    "status": "REFUND",
+    "refund_inr": 128.25,
+    "partial_tools": [
+      "get_order",
+      "search_policy"
+    ],
+    "resumed_tools": [
+      "calculate_refund",
+      "issue_refund"
+    ],
+    "tools_across_both": [
+      "get_order",
+      "search_policy",
+      "calculate_refund",
+      "issue_refund"
+    ],
+    "llm_calls": 5,
+    "tokens_used": 1147
+  },
+  "plan_and_execute_comparison": "ReAct uses 5 calls for S1, 3 for S5, and 2 for S6 in these runs, paying more calls and tokens as each tool result returns to the model. A plan-and-execute design can ask for a whole known sequence once and use fewer calls, but it must replan when an observation differs from the plan: NOT_FOUND should stop lookup, and a cancelled order must not proceed to refund calculation. For refunds, ReAct is safer because each decision follows the observed database and policy result, while the fixed six-call bound provides a clear human handoff for loops.",
+  "ledger_entries": 4,
+  "agent_run_entries": 11,
+  "zero_overlap_failure_questions": [
+    "What delivery time makes a completed order eligible for a full refund?",
+    "How soon is money returned when a payment fails but is deducted?"
+  ]
+}

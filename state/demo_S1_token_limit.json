@@ -1,0 +1,57 @@
+{
+  "run_id": "demo_S1_token_limit",
+  "scenario_id": "S1",
+  "messages": [
+    {
+      "role": "system",
+      "content": "You are an AGENT for simulated refunds. Use the tools to inspect orders and policy before deciding. Only completed orders qualify; over 45 delivery minutes earns the full order amount; amounts over INR 1000 must be escalated. Finish with REFUND, ESCALATE, DENIED, or NOT_FOUND and a short explanation."
+    },
+    {
+      "role": "user",
+      "content": "My order ORD-100048 reached me very late. I would like a refund."
+    },
+    {
+      "role": "assistant",
+      "content": null,
+      "tool_calls": [
+        {
+          "id": "call_1",
+          "name": "get_order",
+          "arguments": {
+            "order_id": "ORD-100048"
+          }
+        }
+      ]
+    },
+    {
+      "role": "tool",
+      "tool_call_id": "call_1",
+      "name": "get_order",
+      "content": "{\"delivery_minutes\": 65, \"order_amount\": 128.25, \"order_id\": \"ORD-100048\", \"status\": \"completed\"}"
+    }
+  ],
+  "tokens_used": 89,
+  "step_number": 1,
+  "tools_executed": [
+    "get_order"
+  ],
+  "steps": [
+    {
+      "tool_name": "get_order",
+      "arguments": {
+        "order_id": "ORD-100048"
+      },
+      "observation": {
+        "order_id": "ORD-100048",
+        "status": "completed",
+        "order_amount": 128.25,
+        "delivery_minutes": 65
+      }
+    }
+  ],
+  "llm_calls": 1,
+  "max_iterations": 6,
+  "token_limit": 200,
+  "time_limit_seconds": 10.0,
+  "elapsed_seconds": 0.004585900000165566
+}

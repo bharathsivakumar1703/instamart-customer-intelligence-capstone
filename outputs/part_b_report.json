@@ -1,0 +1,265 @@
+{
+  "rfm": {
+    "customers": 1175,
+    "recency_median": 19.0,
+    "recency_min": 0,
+    "recency_max": 180,
+    "frequency_mean": 9.45531914893617,
+    "frequency_max": 33,
+    "monetary_mean": 2552.0585531914894,
+    "monetary_max": 14766.55
+  },
+  "segmentation": {
+    "chosen_k": 4,
+    "kmeans_scores": [
+      {
+        "k": 2,
+        "inertia": 1820.760553011851,
+        "silhouette": 0.4649718051476151
+      },
+      {
+        "k": 3,
+        "inertia": 1268.234587068762,
+        "silhouette": 0.4451611905197954
+      },
+      {
+        "k": 4,
+        "inertia": 743.0711078443474,
+        "silhouette": 0.5255443348818724
+      },
+      {
+        "k": 5,
+        "inertia": 617.3666358545001,
+        "silhouette": 0.48049500840771253
+      },
+      {
+        "k": 6,
+        "inertia": 503.17062225816545,
+        "silhouette": 0.4818721636138158
+      },
+      {
+        "k": 7,
+        "inertia": 408.46045441940896,
+        "silhouette": 0.4163373417690264
+      },
+      {
+        "k": 8,
+        "inertia": 366.50348655316816,
+        "silhouette": 0.4123290612695322
+      }
+    ],
+    "profiles": [
+      {
+        "segment_id": 0,
+        "segment_name": "Steady Everyday",
+        "size": 436,
+        "mean_recency": 28.862385321100916,
+        "mean_frequency": 3.772935779816514,
+        "mean_monetary": 1057.618233944954,
+        "is_premium": false,
+        "recommended_action": "Encourage a second category with a relevant cross-category recommendation."
+      },
+      {
+        "segment_id": 1,
+        "segment_name": "Premium High-Value",
+        "size": 138,
+        "mean_recency": 24.115942028985508,
+        "mean_frequency": 6.768115942028985,
+        "mean_monetary": 7129.695652173913,
+        "is_premium": true,
+        "recommended_action": "Offer a tailored premium bundle and protect the relationship with proactive service."
+      },
+      {
+        "segment_id": 2,
+        "segment_name": "Frequent Essentials",
+        "size": 419,
+        "mean_recency": 8.766109785202865,
+        "mean_frequency": 19.403341288782816,
+        "mean_monetary": 3410.020525059666,
+        "is_premium": false,
+        "recommended_action": "Use replenishment reminders and practical multi-buy offers."
+      },
+      {
+        "segment_id": 3,
+        "segment_name": "Cooling-Off Occasional",
+        "size": 182,
+        "mean_recency": 109.04395604395604,
+        "mean_frequency": 2.2032967032967035,
+        "mean_monetary": 685.9925824175824,
+        "is_premium": false,
+        "recommended_action": "Send a modest win-back offer and test whether delivery experience is a barrier."
+      }
+    ],
+    "premium_segment_id": 1,
+    "pca_explained_variance_ratio": [
+      0.6342787496047423,
+      0.2180376171454743
+    ],
+    "pca_total_explained_variance_ratio": 0.8523163667502166
+  },
+  "lapse_cohort": {
+    "customers": 1156,
+    "lapsed": 443,
+    "lapsed_percent": 38.32179930795848,
+    "train_rows": 924,
+    "test_rows": 232,
+    "features": [
+      "recency",
+      "frequency",
+      "monetary",
+      "average_discount_pct",
+      "cancellation_rate",
+      "average_delivery_minutes",
+      "age",
+      "tenure_days",
+      "city",
+      "gender",
+      "favourite_category"
+    ],
+    "max_order_date_entering_features": "2025-08-31",
+    "segment_features_excluded": true,
+    "features_have_missing_values": false,
+    "favourite_category_tie_rule": "alphabetically first category"
+  },
+  "baseline": {
+    "accuracy": 0.6163793103448276,
+    "confusion_matrix_labels_0_1": [
+      [
+        143,
+        0
+      ],
+      [
+        89,
+        0
+      ]
+    ],
+    "precision_lapsed": 0.0,
+    "recall_lapsed": 0.0,
+    "f1_lapsed": 0.0
+  },
+  "logistic_regression": {
+    "best_params": {
+      "model__C": 100
+    },
+    "best_cv_f1": 0.650552962900789,
+    "test": {
+      "accuracy": 0.728448275862069,
+      "confusion_matrix_labels_0_1": [
+        [
+          111,
+          32
+        ],
+        [
+          31,
+          58
+        ]
+      ],
+      "precision_lapsed": 0.6444444444444445,
+      "recall_lapsed": 0.651685393258427,
+      "f1_lapsed": 0.6480446927374302
+    }
+  },
+  "random_forest": {
+    "best_params": {
+      "model__max_depth": 8,
+      "model__min_samples_leaf": 10
+    },
+    "best_cv_f1": 0.6810534884225208,
+    "test": {
+      "accuracy": 0.7370689655172413,
+      "confusion_matrix_labels_0_1": [
+        [
+          113,
+          30
+        ],
+        [
+          31,
+          58
+        ]
+      ],
+      "precision_lapsed": 0.6590909090909091,
+      "recall_lapsed": 0.651685393258427,
+      "f1_lapsed": 0.655367231638418
+    }
+  },
+  "selected_model": "random_forest",
+  "frequency_scaler_mean_train_only": 8.114718614718615,
+  "frequency_mean_full_cohort": 8.028546712802768,
+  "class_balance": {
+    "train_counts_before": {
+      "0": 570,
+      "1": 354
+    },
+    "train_counts_after": {
+      "0": 570,
+      "1": 570
+    },
+    "added_lapsed_duplicates": 216,
+    "balanced_logistic_test": {
+      "accuracy": 0.7155172413793104,
+      "confusion_matrix_labels_0_1": [
+        [
+          90,
+          53
+        ],
+        [
+          13,
+          76
+        ]
+      ],
+      "precision_lapsed": 0.5891472868217055,
+      "recall_lapsed": 0.8539325842696629,
+      "f1_lapsed": 0.6972477064220184
+    }
+  },
+  "random_forest_top_features": [
+    {
+      "feature": "numeric__frequency",
+      "importance": 0.2795887034284961
+    },
+    {
+      "feature": "numeric__monetary",
+      "importance": 0.2711764079216408
+    },
+    {
+      "feature": "numeric__recency",
+      "importance": 0.11514903927379687
+    },
+    {
+      "feature": "numeric__average_delivery_minutes",
+      "importance": 0.06128614021402933
+    },
+    {
+      "feature": "numeric__cancellation_rate",
+      "importance": 0.05232496989833942
+    }
+  ],
+  "logistic_coefficient_signs": [
+    {
+      "feature": "recency",
+      "coefficient": 0.039585029985201144,
+      "direction": "raises"
+    },
+    {
+      "feature": "frequency",
+      "coefficient": -1.6982389203159185,
+      "direction": "lowers"
+    },
+    {
+      "feature": "monetary",
+      "coefficient": 0.28457332751943,
+      "direction": "raises"
+    }
+  ],
+  "saved_model_predictions_reproduced": true,
+  "retention_list": {
+    "rows": 10,
+    "actually_lapsed_count": 1,
+    "premium_test_customers": 40,
+    "output_columns": [
+      "customer_id",
+      "lapse_probability",
+      "actually_lapsed"
+    ]
+  }
+}
